@@ -26,7 +26,7 @@ jobs:
 
             - name: Run black
               run: |
-                poetry run black ./src --diff --check --color
+                poetry run black ./envalidate --diff --check --color
 
             
     test:
@@ -52,7 +52,7 @@ jobs:
 
             - name: Run tests
               run: |
-                poetry run coverage run -m pytest ./src/tests/
+                poetry run coverage run -m pytest ./tests/
 
             - name: Coveralls
               uses: coverallsapp/github-action@v2

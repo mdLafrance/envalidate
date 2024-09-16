@@ -34,7 +34,9 @@ class Envalidator(BaseModel):
                 value = None
 
             if not value and field.is_required():
-                raise MissingEnvironmentError(f"Missing environment variable: {target_env_var}")
+                raise MissingEnvironmentError(
+                    f"Missing environment variable: {target_env_var}"
+                )
 
             data[field_name] = value
 
