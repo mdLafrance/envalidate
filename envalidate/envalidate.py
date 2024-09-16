@@ -11,7 +11,7 @@ from .errors import MissingEnvironmentError
 
 
 class Envalidator(BaseModel):
-    """`Envalidator` provides a way to validate and type check environment variables at runtime. 
+    """`Envalidator` provides a way to validate and type check environment variables at runtime.
 
     Create a subclass of `Envalidator`, and define the fields that should be automatically parsed and validated from the current environment. Constructing an instance of this subclass will source values from the environment, and throw the appropriate exceptions if expected values are missing or are of the incorrect type.
 
@@ -26,7 +26,7 @@ class Envalidator(BaseModel):
 
     class MyEnvironment(Envalidator):
         # This will be sourced from the environment variable API_KEY.
-        api_key: str 
+        api_key: str
 
         # This will be sourced from the environment variable X_SERVER_URL, and default to localhost
         server_url: Annotated[str, "X_SERVER_URL"] = "https://localhost:8080"
@@ -42,6 +42,7 @@ class Envalidator(BaseModel):
     client = new Client(env.server_url, env.api_key)
     ```
     """
+
     @classmethod
     def from_env(cls, **kwargs):
         return cls(**kwargs)
