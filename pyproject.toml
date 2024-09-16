@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "envalidate"
-version = "0.1.0"
+version = "0.1.1"
 description = "Ensure that your environment variables are always valid, and totally type safe."
 authors = ["mdlafrance <maxlafrance97@gmail.com>"]
 license = "GPL-3.0-or-later"
