@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "envalidate"
+version = "0.1.0"
+description = "Ensure that your environment variables are always valid, and totally type safe."
+authors = ["mdlafrance <maxlafrance97@gmail.com>"]
+license = "GPL-3.0-or-later"
+homepage = "https://github.com/mdlafrance/pygendocs"
+repository = "https://github.com/mdlafrance/pygendocs"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "^2.9.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+coverage = "^7.6.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
