@@ -54,6 +54,7 @@ jobs:
               run: |
                 poetry run coverage run -m pytest ./tests/
                 poetry run coverage report --fail-under=80
+                poetry run coverage lcov
 
             - name: Coveralls
               uses: coverallsapp/github-action@v2
